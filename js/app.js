@@ -4,6 +4,7 @@ var canvas = document.getElementById('imageCanvas');
     canvas.width = 600;
     canvas.height = 600;
 var ctx = canvas.getContext('2d');
+var frame = "frame-1";
 
 
 function popupResult(result) {
@@ -30,7 +31,7 @@ function popupResult(result) {
  */
 function drawFrame() {
   var img = new Image();
-  img.src = 'images/frame.png';
+  img.src = 'images/' + frame + '.png';
 
   img.onload = function() {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -135,4 +136,18 @@ $('.basic-result').on('click', function(e) {
 	}).then(function (resp) {
     drawProfPict(resp);
 	});
+});
+
+$('.frame-picker a').on('click', function(e) {
+  e.preventDefault();
+  var $this = $(this);
+  
+  $('.frame-picker li a').removeClass('active');
+
+  $('.cr-boundary').removeClass(frame);
+  frame = $this.data('frame');
+  $('.cr-boundary').addClass(frame);
+  
+  $this.addClass('active');
+  
 });

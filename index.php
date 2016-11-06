@@ -11,7 +11,7 @@
   <title>Support Arkavidia!</title>
 </head>
 <body>
-  <h1 class="title">Support Arkavidia dengan menambahkan <br> badge Arkavidia di fotomu!</h1>
+  <h1 class="title">Support Arkavidia dengan menambahkan <br> frame Arkavidia di fotomu!</h1>
 
   <div class="uploader">
     <canvas id="imageCanvas" class="image-canvas"></canvas>
@@ -23,6 +23,14 @@
       <label for="imageLoader">Choose Photo</label>
       <a class="basic-result button">Preview</a>
     </div>
+  </div>
+
+  <div class="frame-picker">
+    <h2>Choose your frame</h2>
+    <ul>
+      <li><a data-frame="frame-1" href="#" class="active">Frame 1</a></li>
+      <li><a data-frame="frame-2" href="#">Frame 2</a></li>
+    </ul>
   </div>
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
