@@ -1,0 +1,24 @@
+{
+  "name": "Support Arkavidia Frame",
+  "homepage": "https://github.com/husnimun/Support-Arkavidia",
+  "authors": [
+    "Husni Munaya <husnimun@gmail.com>"
+  ],
+  "description": "Support Arkavidia frame generator",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.0",
+    "croppie": "~2.3.0",
+    "sweetalert": "~1.1.3",
+    "cropper": "~2.3.2"
+  }
+}
