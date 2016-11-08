@@ -15,9 +15,19 @@ h6 {
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 540px) {
+  .sweet-alert {
+    width: 80% !important;
+    margin-left: 0;
+    margin-right: 0;
+    /*top: 50%;*/
+    left: 50%;
+  }
+}
+
 .sweet-alert button {
   background-color: #0EB9BC;
-  font-weight: bold;
+  font-weight: bold;  
   padding: 12px;
 }
 .sweet-alert img {
@@ -47,7 +57,7 @@ h6 {
 .caption-text {
   display: block;
   width: 100%;
-  height: 100px;
+  height: 80px;
 }
 
 /* Customize default file input button */
