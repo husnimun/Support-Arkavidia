@@ -13,7 +13,8 @@ function popupResult(result) {
   	html = result.html;
   }
   if (result.src) {
-  	html = '<img src="' + result.src + '" />' +
+  	html = '<img src="' + result.src + '" class="img-result" />' +
+    '<div class="caption"><p>You can publish it on your timeline or instagram with this caption :)</p> <textarea class="caption-text">I support @Arkavidia Informatics and IT Festival because I am aware that IT could make big impact on the Economy of Indonesia.\n\nSaturday, 19 November 2016\nInstitut Teknologi Bandung, Jln. Ganeca No.10.\n\narkavidia.id\nInstagram : @arkavidia\nFacebook : arkavidia\nTwitter : @arkavidia3_0\nLine : @aab5143y\nArkavidia Informatics & IT Festival Through The Era of Digital Economy\nOrganized by : Himpunan Mahasiswa Informatika ITB, Program Studi Teknik Informatika, dan Program studi Sistem dan Teknologi Infomasi ITB\n#Arkavidia #EraOfDigitalEconomy</textarea><a href="#" class="copy-caption">Copy caption to clipboard</a></div>' +    
     '<a href="'+ result.src +'" id="downloadlink" class="button" download="arkavidia.jpg">Download</a>' +
     '<button class="confirm button" tabindex="1">Cancel</button>';
   }
@@ -150,4 +151,18 @@ $('.frame-picker a').on('click', function(e) {
   
   $this.addClass('active');
   
+});
+
+
+$('body').on('click', '.copy-caption', function(event) {
+  var copyTextarea = document.querySelector('.caption-text');
+  copyTextarea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    alert('Text has been copied!')
+  } catch (err) {
+    alert('Oops, unable to copy');
+  }
 });
